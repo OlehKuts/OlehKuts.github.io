@@ -1,0 +1,84 @@
+body {
+  background-color: #E8E8E8 !important;
+ /*background: #22c1c3;   fallback for old browsers 
+background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  
+background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+*/}
+
+#main {
+  width:360px;
+  height: 180px;
+  margin: 20px auto 0px auto;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+  background-color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 50px auto 0px auto;
+  }
+
+  #checkLine {
+    margin: 10px auto 0px auto;
+    font-size: 30px;
+    text-align: center;
+    }
+
+    #thema {
+      margin: 10px auto 0px auto;
+      font-size: 30px;
+      text-align: center;
+      }
+
+    #allThemaWords {
+      margin: 10px 30px 0px 30px !important;
+      font-size: 30px;
+      text-align: center;
+    }
+
+      #checkTheme {
+        margin: 10px auto 0px auto;
+        font-size: 30px;
+        text-align: center;
+        }
+
+
+  #buttons {
+    width:360px;
+    height: 38px;
+    margin: 0px auto;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+    background-color: white;
+    }
+
+    #b1 {
+      float: left;
+      font-weight: bolder;
+    }
+
+    #b2 {
+      float: right;
+      font-weight: bold;
+    }
+
+    #newGame {
+      width:360px;
+      margin: 0px auto;
+      border-radius: 5px;
+    }
+
+    #answer {
+      margin-top: 20px;
+      width: 400px;
+    }
+
+    #word, #decision, #percentage {
+      font-weight: bold
+    }
+    
+  #check10 {
+    background-color: #563D7C
+  }
+  
+  
+  
