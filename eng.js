@@ -3,7 +3,7 @@
 // Hotel, In der Stadt, Einkaufen, Restarant, Lebensmittel
 // Strand, Urlaub, Arzt, Büro, Jobsuche, Arbeit
 // Computer
-const saetze = [
+const expressions = [
   {ukr: "Привіт", deu: "Hallo"},
   {ukr: "Доброго ранку", deu: "Guten Morgen"},
   {ukr: "Доброго дня", deu: "Guten Tag"},
@@ -52,23 +52,23 @@ const saetze = [
   {ukr: "Я з Лейпцига", deu: "Ich bin aus Leipzig"},
 ];
 
-const kurzeFragen = [
-  {ukr: "Хто?", deu: "Wer?"},
-  {ukr: "Де?", deu: "Wo?"},
-  {ukr: "Коли?", deu: "Wann?"},
-  {ukr: "Чий?", deu: "Wessen?"},
-  {ukr: "Чому?", deu: "Warum?"},
-  {ukr: "Куди?", deu: "Wohin?"},
-  {ukr: "Який?", deu: "Welche?"},
-  {ukr: "Що?", deu: "Was?"},
-  {ukr: "Як?", deu: "Wie?"},
-  {ukr: "Як довго?", deu: "Wie lange?"},
-  {ukr: "Скільки?", deu: "Wie viel?"},
-  {ukr: "До кого?", deu: "An wen?"},
-  {ukr: "З ким?", deu: "Mit wem?"},
-  {ukr: "З чим?", deu: "Womit?"}
+const questions = [
+ {ukr: "Хто?", deu: "Wer?"},
+ {ukr: "Де?", deu: "Wo?"},
+ {ukr: "Коли?", deu: "Wann?"},
+ {ukr: "Чий?", deu: "Wessen?"},
+ {ukr: "Чому?", deu: "Warum?"},
+ {ukr: "Куди?", deu: "Wohin?"},
+ {ukr: "Який?", deu: "Welche?"},
+ {ukr: "Що?", deu: "Was?"},
+ {ukr: "Як?", deu: "Wie?"},
+ {ukr: "Як довго?", deu: "Wie lange?"},
+ {ukr: "Скільки?", deu: "Wie viel?"}, 
+ {ukr: "До кого?", deu: "An wen?"},
+ {ukr: "З ким?", deu: "Mit wem?"},
+ {ukr: "З чим?", deu: "Womit?"}
 ] 
-const ausdruecke = [
+const sentences = [
   {ukr: "до речі", deu: "übrigens"},
   {ukr: "принаймні", deu: "mindestens"},
   {ukr: "нарешті", deu: "schließlich"},
@@ -82,16 +82,17 @@ const ausdruecke = [
   {ukr: "яким чином", deu: "wie das"}
 ]
 
-let currentTheme = saetze;
+let currentTheme = expressions;
 let answer = "";
 let answer2 = "";
 let answerTrue = 0;
 let answerFalse = 0;
 let percentage = 0;
 let stopper = 0;
-let testAmount = 9
-
-let currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ")
+let testAmount = expressions.length - 1;
+let memory = expressions
+let currentThemaWords = memory.map(item => item.ukr + " - " + item.deu + "; ")
+let showCorrect = false
 
 function pickWordCreator () {
   let x = Math.floor(Math.random()*currentTheme.length);
@@ -105,6 +106,7 @@ function pickWordCreator () {
 //jQ
 
 $("#newGame").on("click", function() {
+  currentTheme = memory
   answer = "";
   answer2 = "";
   answerTrue = 0;
@@ -120,20 +122,17 @@ $("#newGame").on("click", function() {
   $("#percentage").text("Ihr Ergebnis wird hier angezeigt!");
   })
 
-  $("#check5").on("click", function() {
-    testAmount = 4;
-  $("#wordsAmount").text("5 Worte");
-    })
-
+ 
 $("#check10").on("click", function() {
       testAmount = 9;
   $("#wordsAmount").text("10 Worte");
       })
   
-$("#check15").on("click", function() {
-        testAmount = 14;
-  $("#wordsAmount").text("15 Worte");
-        })
+
+$("#auditMode").on("click", function() {
+          testAmount = currentTheme.length - 1;
+    $("#wordsAmount").text( memory.length + " Worte");
+          })
 
 $("#showThema").on("click", function() {
           $("#themaWords").html(currentThemaWords);
@@ -141,28 +140,34 @@ $("#showThema").on("click", function() {
 
 
 $("#saetze").on("click", function() {
-          currentTheme = saetze;
+          memory = expressions
+          currentTheme = expressions;
+          testAmount = expressions.length - 1;
 currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
         $(".themeName").text("Sätze");
+    $("#wordsAmount").text( memory.length + " Worte");
           })    
 
 $("#kurzeFragen").on("click", function() {
-            currentTheme = kurzeFragen;
+            memory = questions;
+            currentTheme = questions;
+            testAmount = questions.length - 1;
 currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
           $(".themeName").text("Kurze Fragen");
+    $("#wordsAmount").text( memory.length + " Worte");
             })   
 
 $("#ausdruecke").on("click", function() {
-              currentTheme = ausdruecke;
+              memory = sentences;
+              currentTheme = sentences;
+              testAmount = sentences.length - 1;
   currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
             $(".themeName").text("Ausdrücke");
+    $("#wordsAmount").text( memory.length + " Worte");
               })   
   
-
-
-
-
 $("#b1").on("click", function() {
+  showCorrect = false
   if(stopper < testAmount){
   $("#answerInput").val("");
   $("#decision").removeClass("alert-success");
@@ -172,18 +177,24 @@ $("#b1").on("click", function() {
   $("#word").text(pickWordCreator())
   stopper++;}
   else {
-    $("#decision").text("Ihr Endergebnis" );
+    $("#decision").text("Ihr Endergebnis ist " );
   }
   })
 
 
   $("#b2").on("click", function() {
+    if (showCorrect === true){
     $("#word").text(answer)
+    }
     })
 
     $("input[type='text']").on("keypress",  function (event) { //"input[type='text']"
     if (event.which === 13) {
+      showCorrect = true
     if ($("input[type='text']").val() == answer ||  $("input[type='text']").val() == answer2){
+      currentTheme = currentTheme.filter((item) => {
+        return item.deu !== answer // перевірка тільки на першу правильну, потім додати і для другої
+      })
        answerTrue++;
        percentage = (answerTrue / (answerTrue + answerFalse) * 100).toFixed(0);
        $("#percentage").text(percentage + "%");
@@ -194,6 +205,9 @@ $("#b1").on("click", function() {
       $("#decision").addClass("alert-success");
      }
      else {
+      currentTheme = currentTheme.filter((item) => {
+        return item.deu !== answer // перевірка тільки на першу правильну, потім додати і для другої
+      })
        answerFalse++;
        percentage = (answerTrue / (answerTrue + answerFalse) * 100).toFixed(0);
        $("#percentage").text(percentage + "%");
