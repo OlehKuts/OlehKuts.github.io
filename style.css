@@ -79,10 +79,35 @@ background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, F
   #check10 {
     background-color: #563D7C
   }
+
+  #colors {
+    background-color: darkorange;
+    border-color: darkorange;
+  }
   
   #sentences {
     background-color: goldenrod;
     border-color: goldenrod;
+  }
+
+  #time {
+    background-color: aqua;
+    border-color: aqua;
+  }
+
+  #weather {
+    background-color: chartreuse;
+    border-color: chartreuse;
+  }
+
+  #opposites {
+    background-color: fuchsia;
+    border-color: fuchsia;
+  }
+
+  #bodyparts {
+    background-color: darkslateblue;
+    border-color: darkslateblue;
   }
 
   

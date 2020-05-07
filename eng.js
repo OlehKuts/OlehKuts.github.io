@@ -1,5 +1,4 @@
-// Zeit, Wetter, Gegensätze, Körperteile, Reisen,
-// Hotel, In der Stadt, Einkaufen, Restarant, Lebensmittel
+//  Reisen, Hotel, In der Stadt, Einkaufen, Restarant, Lebensmittel
 // Strand, Urlaub, Arzt, Büro, Jobsuche, Arbeit, Computer
 const expressions = [
   {ukr: "Привіт", deu: "Hallo"},
@@ -56,7 +55,7 @@ const questions = [
  {ukr: "Чий?", deu: "Wessen?"},
  {ukr: "Чому?", deu: "Warum?"},
  {ukr: "Куди?", deu: "Wohin?"},
- {ukr: "Який?", deu: "Welche?"},
+ {ukr: "Який?", deu: "Welcher?"},
  {ukr: "Що?", deu: "Was?"},
  {ukr: "Як?", deu: "Wie?"},
  {ukr: "Як довго?", deu: "Wie lange?"},
@@ -191,7 +190,7 @@ const people = [
   {ukr: "зять", deu: "der Schwager"},
   {ukr: "невістка", deu: "die Schwägerin"},
   {ukr: "Хто Ваш батько?", deu: "Wer ist Ihr Vater?"},
-  {ukr: "Ви родичі?", deu: "Sind sie vervandt?"},
+  {ukr: "Ви родичі?", deu: "Sind sie verwandt?"},
   {ukr: "Скільки років вашому братові?", deu: "Wie alt ist Ihr Bruder?"},
   {ukr: "хлопець", deu: "der Junge"},
   {ukr: "дівчина", deu: "das Mädchen"},
@@ -209,6 +208,158 @@ const people = [
   {ukr: "А Ви одружені?", deu: "Sind Sie verheiratet?"},
   {ukr: "Це Ваша подруга?", deu: "Ist das Ihre Freundin?"},
 ];
+const time = [
+  {ukr: "сьогодні", deu: "heute"},
+  {ukr: "вчора", deu: "gestern"},
+  {ukr: "завтра", deu: "morgen"},
+  {ukr: "дні тижня", deu: "die Wochentage"},
+  {ukr: "понеділок", deu: "der Montag"},
+  {ukr: "вівторок", deu: "der Dienstag"},
+  {ukr: "середа", deu: "der Mittwoch"},
+  {ukr: "четвер", deu: "der Donnerstag"},
+  {ukr: "п'ятниця", deu: "der Freitag"},
+  {ukr: "субота", deu: "der Samstag"},
+  {ukr: "неділя", deu: "der Sonntag"},
+  {ukr: "місяці року", deu: "die Monate des Jahres"},
+  {ukr: "січень", deu: "der Januar"},
+  {ukr: "лютий", deu: "der Februar"},
+  {ukr: "березень", deu: "der März"},
+  {ukr: "квітень", deu: "der April"},
+  {ukr: "травень", deu: "der Mai"},
+  {ukr: "червень", deu: "der Juni"},
+  {ukr: "липень", deu: "der Juli"},
+  {ukr: "серпень", deu: "der August"},
+  {ukr: "вересень", deu: "der September"},
+  {ukr: "жовтень", deu: "der Oktober"},
+  {ukr: "листопад", deu: "der November"},
+  {ukr: "грудень", deu: "der Dezember"},
+  {ukr: "Який сьогодні день?", deu: "Welcher Tag ist heute?"},
+  {ukr: "Сьогодні 21 травня 2020 року", deu: "Heute ist der einundzwanzigste Mai zweitausendzwanzig"},
+  {ukr: "минулого тижня", deu: "letzte Woche"},
+  {ukr: "наступного місяця", deu: "nächsten Monat"},
+  {ukr: "завтра зранку", deu: "morgen früh"},
+  {ukr: "вчора ввечері", deu: "gestern Abend"},
+  {ukr: "сьогодні ввечері", deu: "heute Abend"},
+  {ukr: "позавчора", deu: "vorgestern"},
+  {ukr: "післязавтра", deu: "übermorgen"},
+  {ukr: "вихідні", deu: "das Wochenende"},
+  {ukr: "Котра година?", deu: "Wie spät ist es?"},
+  {ukr: "О котрій годині?", deu: "Um welche Uhrzeit?"},
+  {ukr: "Зараз друга година", deu: "Es ist zwei Uhr"},
+  {ukr: "Зараз 8:45", deu: "Es ist acht Uhr fünfundvierzig"},
+  {ukr: "О дев'ятій годині", deu: "Um neun Uhr"},
+  {ukr: "полудень", deu: "zwölf Uhr"},
+  {ukr: "північ(00:00)", deu: "die Mitternacht"},
+  {ukr: "післяобідній час", deu: "der Nachmittag"},
+  {ukr: "після(про час)", deu: "hinterher"},
+  {ukr: "В якому місяці?", deu: "In welchem Monat?"},
+  {ukr: "Якого дня?", deu: "An welchem Tag?"},
+  {ukr: "Розбудіть мене о восьмій ранку", deu: "Wecken Sie mich um acht"},
+  {ukr: "рано", deu: "früh"},
+  {ukr: "ніколи", deu: "nie"},
+  {ukr: "іноді", deu: "manchmal"},
+  {ukr: "скоро, незабаром", deu: "bald"},
+];
+const weather = [
+  {ukr: "Яка погода?", deu: "Wie ist das Wetter?"},
+  {ukr: "Жарко", deu: "Es ist heiß"},
+  {ukr: "Холодно", deu: "Es ist kalt"},
+  {ukr: "Волого", deu: "Es ist schwül"},
+  {ukr: "Сонячно", deu: "Es ist sonnig"},
+  {ukr: "Хмарно", deu: "Es ist bewölkt"},
+  {ukr: "Йде дощ", deu: "Es regnet"},
+  {ukr: "Йде сніг", deu: "Es schneit"},
+  {ukr: "Вітряно", deu: "Es ist windig"},
+  {ukr: "Неприємно", deu: "Es ist schlecht"},
+  {ukr: "Яка температура?", deu: "Wie viel Grad ist es?"},
+  {ukr: "зима", deu: "der Winter"},
+  {ukr: "весна", deu: "der Frühling"},
+  {ukr: "літо", deu: "der Sommer"},
+  {ukr: "осінь", deu: "der Herbst"},
+  {ukr: "пори року", deu: "die Jahreszeiten"},
+];
+const opposites = [
+  {ukr: "товстий", deu: "dick"},
+  {ukr: "худий", deu: "dünn"},
+  {ukr: "легкий", deu: "leicht"},
+  {ukr: "важкий", deu: "schwer"},
+  {ukr: "однаковий", deu: "gleich"},
+  {ukr: "різний", deu: "unterschiedlich"},
+  {ukr: "кілька", deu: "wenige"},
+  {ukr: "багато", deu: "viel"},
+  {ukr: "тягнути", deu: "ziehen"},
+  {ukr: "штовхати", deu: "drücken"},
+  {ukr: "світлий", deu: "hell"},
+  {ukr: "темний", deu: "dunkel"},
+  {ukr: "самотній", deu: "allein"},
+  {ukr: "вологий", deu: "nass"},
+  {ukr: "сухий", deu: "trocken"},
+  {ukr: "швидкий", deu: "schnell"},
+  {ukr: "повільно", deu: "langsam"},
+  {ukr: "пустий", deu: "leer"},
+  {ukr: "повний", deu: "voll"},
+  {ukr: "красивий", deu: "hübsch"},
+  {ukr: "потворний", deu: "hässlich"},
+  {ukr: "гучний", deu: "laut"},
+  {ukr: "тихий", deu: "leise"},
+  {ukr: "сильний", deu: "stark"},
+  {ukr: "слабкий", deu: "schwach"},
+  {ukr: "жорсткий", deu: "hart"},
+  {ukr: "м'який", deu: "weich"},
+  {ukr: "брехня", deu: "die Lüge"},
+  {ukr: "правда", deu: "die Warheit"},
+  {ukr: "більше", deu: "mehr"},
+  {ukr: "менше", deu: "weniger"},
+  {ukr: "щасливий", deu: "glücklich"},
+  {ukr: "сумний", deu: "traurig"},
+  {ukr: "брудний", deu: "dreckig"},
+  {ukr: "чистий", deu: "sauber"},
+  {ukr: "пізній", deu: "spät"},
+  {ukr: "живий", deu: "lebendig"},
+  {ukr: "мертвий", deu: "tot"},
+  {ukr: "до", deu: "vor"},
+  {ukr: "після", deu: "nach"},
+  {ukr: "всі", deu: "alle"},
+  {ukr: "ніхто", deu: "keine"}, 
+];
+const bodyparts = [
+  {ukr: "голова", deu: "der Kopf"},
+  {ukr: "лоб", deu: "die Stirn"},
+  {ukr: "волосся", deu: "das Haar"},
+  {ukr: "обличчя", deu: "das Gesicht"},
+  {ukr: "вії", deu: "die Wimpern"},
+  {ukr: "брови", deu: "die Augenbraue"},
+  {ukr: "щока", deu: "die Wange"},
+  {ukr: "зуби", deu: "die Zähne"},
+  {ukr: "язик", deu: "die Zunge"},
+  {ukr: "губи", deu: "die Lippen"},
+  {ukr: "шия", deu: "der Nacken"},
+  {ukr: "горло", deu: "der Hals"},
+  {ukr: "підборіддя", deu: "das Kinn"},
+  {ukr: "щелепа", deu: "der Kiefer"},
+  {ukr: "плече", deu: "die Schulter"},
+  {ukr: "груди", deu: "die Brust"},
+  {ukr: "спина", deu: "der Rücken"},
+  {ukr: "шлунок", deu: "der Magen"},
+  {ukr: "талія", deu: "die Taille"},
+  {ukr: "торс", deu: "der Rimpf"},
+  {ukr: "лікоть", deu: "der Ellenbogen"},
+  {ukr: "передпліччя", deu: "der Unterarm"},
+  {ukr: "зап'ястя", deu: "das Handgelenk"},
+  {ukr: "палець", deu: "der Finger"},
+  {ukr: "великий палець руки", deu: "der Daumen"},
+  {ukr: "ніготь", deu: "der Nagel"},
+  {ukr: "стегно", deu: "der Oberschenkel"},
+  {ukr: "сідниці", deu: "das Gesäß"},
+  {ukr: "нога", deu: "der Fuß"},
+  {ukr: "ступня", deu: "das Bein"},
+  {ukr: "щиколотка", deu: "der Knöchel"},
+  {ukr: "задня поверхня гомілки", deu: "die Wade"},
+  {ukr: "коліно", deu: "das Knie"},
+  {ukr: "п'ятка", deu: "die Ferse"},
+  {ukr: "палець ноги", deu: "die Zehen"},
+];
+
 
 let currentTheme = expressions;
 let answer = "";
@@ -324,7 +475,25 @@ $("#people").on("click", function() {
                     $(".themeName").text("Menschen");
             $("#wordsAmount").text( memory.length + " Worte");
                       }) 
+
+$("#time").on("click", function() {
+                        memory = time;
+                        currentTheme = time;
+                        testAmount = time.length - 1;
+            currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+                      $(".themeName").text("Zeit");
+              $("#wordsAmount").text( memory.length + " Worte");
+                        }) 
   
+ $("#weather").on("click", function() {
+                          memory = weather;
+                          currentTheme = weather;
+                          testAmount = weather.length - 1;
+              currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+                        $(".themeName").text("Wetter");
+                $("#wordsAmount").text( memory.length + " Worte");
+                          }) 
+
 $("#b1").on("click", function() {
   showCorrect = false
   if(stopper < testAmount){
@@ -340,6 +509,23 @@ $("#b1").on("click", function() {
   }
   })
 
+$("#opposites").on("click", function() {
+    memory = opposites;
+    currentTheme = opposites;
+    testAmount = opposites.length - 1;
+currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Gegensätze");
+$("#wordsAmount").text( memory.length + " Worte");
+    }) 
+    
+$("#bodyparts").on("click", function() {
+      memory = bodyparts;
+      currentTheme = bodyparts;
+      testAmount = bodyparts.length - 1;
+currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+    $(".themeName").text("Körperteile");
+$("#wordsAmount").text( memory.length + " Worte");
+      }) 
 
   $("#b2").on("click", function() {
     if (showCorrect === true){
