@@ -1,20 +1,26 @@
 body {
   background-color: #E8E8E8 !important;
- /*background: #22c1c3;   fallback for old browsers 
-background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  
-background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
-*/}
+}
 
 #main {
   width:360px;
   height: 180px;
-  margin: 20px auto 0px auto;
+  margin: 0px auto 0px auto;
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
   background-color: white;
   font-size: 30px;
   text-align: center;
-  padding: 50px auto 0px auto;
+  }
+
+  #leftBlock, #rightBlock {
+  width: 300px;
+  margin: 20px auto 0px auto;
+  }
+
+  #centerBlock {
+    width: 400px;
+    margin: 20px auto 0px auto; 
   }
 
   #checkLine {
@@ -24,7 +30,7 @@ background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, F
     }
 
     #thema {
-      margin: 10px auto 0px auto;
+      margin: 20px auto 0px auto;
       font-size: 30px;
       text-align: center;
       }
@@ -35,12 +41,9 @@ background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, F
       text-align: center;
     }
 
-      #checkTheme {
-        margin: 10px auto 0px auto;
-        font-size: 30px;
-        text-align: center;
-        }
-
+  #check10, #auditMode, #words100, #showThema {
+    font-weight: bold;
+  }
 
   #buttons {
     width:360px;
@@ -76,39 +79,47 @@ background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, F
       font-weight: bold
     }
     
-  #check10 {
-    background-color: #563D7C
+
+  #expressions, #questions, #sentences  {
+    border-color: darkmagenta;
   }
 
-  #colors {
-    background-color: darkorange;
-    border-color: darkorange;
+   #colors, #directions, #people{
+    border-color: forestgreen;
   }
   
-  #sentences {
-    background-color: goldenrod;
-    border-color: goldenrod;
+  #numbers, #weather, #opposites {
+    border-color: navy;
   }
 
-  #time {
-    background-color: aqua;
-    border-color: aqua;
+  #bodyparts, #time, #travel {
+    border-color: teal;
   }
 
-  #weather {
-    background-color: chartreuse;
-    border-color: chartreuse;
+  #verbs1, #verbs2, #verbs3, #verbs4 {
+    border-color: orangered;
   }
 
-  #opposites {
-    background-color: fuchsia;
-    border-color: fuchsia;
+  #study {
+    margin-right: 40px;
   }
 
-  #bodyparts {
-    background-color: darkslateblue;
-    border-color: darkslateblue;
+  #test {
+    margin-left: 40px;
   }
-
   
+  #mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .flexi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+
   

@@ -7,24 +7,56 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>WORDS</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <script src="jQuery.js"></script>
 </head>
 
 <body>
-  
-<div id="checkLine">
-  <button id="check10" class="btn btn-dark">10 Worte</button>
-  <button id="auditMode" class="btn btn-warning">Alle Worte</button>
-  <button id="showThema" class="btn btn-success">Alle Worte zeigen</button>
-</div>
-<div id="thema">
-  <h3>Thema - <span class="themeName">"Sätze"</span> (<span id="wordsAmount">46 Worte</span>)</h3> 
-</div>
-      <div id="main"><button class="btn-secondary btn-md" id="newGame">Neues Spiel</button><br /><p id="word"></p></div>
+
+  <div id="checkLine">
+    <button id="study" class="btn btn-warning">Lernen</button>
+    <button id="check10" class="btn btn-outline-primary">10 Worte aus Thema</button>
+    <button id="auditMode" class="btn btn-outline-primary">Alle Worte aus Thema</button>
+    <button id="words100" class="btn btn-outline-dark">100 zufällige Worte</button>
+    <button id="showThema" class="btn btn-outline-danger">Alle Worte zeigen </button>
+    <button id="test" class="btn btn-success">Test bestehen</button>
+  </div>
+  <div id="thema">
+    <h3>Thema - <span class="themeName"></span> (<span id="wordsAmount">nicht ausgewählt</span>)</h3>
+  </div>
+  <div id="mainContainer">
+
+    <div id="leftBlock">
+      <p class="flexi"> <button id="expressions" class="btn btn-light">Sätze</button>
+        <button id="questions" class="btn btn-light">Kurze Fragen</button>
+        <button id="sentences" class="btn btn-light">Ausdrücke</button>
+      </p>
+      <p class="flexi">
+        <button id="numbers" class="btn btn-light">Zahlen</button>
+        <button id="weather" class="btn btn-light">Wetter</button>
+        <button id="opposites" class="btn btn-light">Gegensätze</button>
+      </p>
+      <p class="flexi">
+        <button id="bodyparts" class="btn btn-light">Körperteile</button>
+        <button id="time" class="btn btn-light">Zeit</button>
+        <button id="travel" class="btn btn-light">Flugreisen</button>
+      </p>
+    </div>
+
+    <div id="centerBlock">
+      <div id="main"><button class="btn-secondary btn-md" id="newGame">Neuer Test</button><br />
+        <p id="word"></p>
+      </div>
       <div id="buttons">
         <button id="b1" class="btn btn-outline-primary">Neues Wort</button>
         <button id="b2" class="btn btn-outline-success">Richtige Antwort</button>
@@ -38,34 +70,40 @@
         </div>
 
         <div class="alert alert-info text-center" role="alert" id="decision">
-            Viel Glück!
-          </div>
+          Viel Glück!
+        </div>
 
-          <div class="alert alert-warning text-center" role="alert" >
-            <p id="percentage">Ihr Ergebnis wird hier angezeigt!</p>
-          </div>
-      </div>
-      <div id="checkTheme">
-        <button id="expressions" class="btn btn-info">Sätze</button>
-        <button id="questions" class="btn btn-secondary">Kurze Fragen</button>
-        <button id="sentences" class="btn btn-dark">Ausdrücke</button>
-        <button id="numbers" class="btn btn-danger">Zahlen</button>
-        <button id="directions" class="btn btn-primary">Richtungen</button>
-        <button id="colors" class="btn btn-dark">Farben</button>
-        <button id="people" class="btn btn-dark">Menschen</button>
-        <button id="time" class="btn btn-dark">Zeit</button>
-        <button id="weather" class="btn btn-dark">Wetter</button>
-        <button id="opposites" class="btn btn-dark">Gegensätze</button>
-        <button id="bodyparts" class="btn btn-dark">Körperteile</button>
-      </div>
-
-      <div id="allThemaWords">
-        <h4 class="themeName"></h4>
-        <div id="themaWords"></div>
+        <div class="alert alert-warning text-center" role="alert">
+          <p id="percentage">Ihr Ergebnis wird hier angezeigt!</p>
+        </div>
 
       </div>
 
-      <script src="eng.js"></script>
+    </div>
+
+    <div id="rightBlock">
+      <p class="flexi"><button id="directions" class="btn btn-light">Richtungen</button>
+        <button id="colors" class="btn btn-light">Farben</button>
+        <button id="people" class="btn btn-light">Menschen</button>
+      </p>
+      <p class="flexi">
+        <button id="verbs1" class="btn btn-light">Verben - teil 1 </button>
+        <button id="verbs2" class="btn btn-light">Verben - teil 2 </button>
+      </p>
+      <p class="flexi">
+        <button id="verbs3" class="btn btn-light">Verben - teil 3 </button>
+        <button id="verbs4" class="btn btn-light">Verben - teil 4 </button>
+      </p>
+    </div>
+  </div>
+
+  <div id="allThemaWords">
+    <h4 class="themeName"></h4>
+    <div id="themaWords"></div>
+  </div>
+
+
+  <script src="eng.js"></script>
 </body>
 
 </html>
