@@ -1,5 +1,5 @@
-// Hotel, In der Stadt, Einkaufen, Restarant, Lebensmittel
-// Strand, Urlaub, Arzt, Büro, Jobsuche, Arbeit, Computer
+// Arzt, Büro, Jobsuche,
+// Arbeit, Computer
 const expressions = [
   { ukr: "Привіт", deu: "Hallo" },
   { ukr: "Доброго ранку", deu: "Guten Morgen" },
@@ -42,7 +42,7 @@ const expressions = [
   { ukr: "З днем народження", deu: "Herzlichen Glückwunsch zum Geburtstag" },
   { ukr: "Вітаю", deu: "Herzlichen Glückwunsch" },
   { ukr: "Удачі", deu: "Viel Glück" },
-  { ukr: "Як Вас звати", deu: "Wie heißen Sie?" },
+  { ukr: "Як Вас звати?", deu: "Wie heißen Sie?" },
   { ukr: "Мене звати Антон", deu: "Ich heiße Anton" },
   { ukr: "Радий зустрітися з вами", deu: "Freut mich, Sie kennen zu lernen" },
   { ukr: "Ви звідки?", deu: "Wo kommen Sie her?" },
@@ -594,7 +594,295 @@ const travel = [
   { ukr: "Де я можу забрати мій багаж?", deu: "Wo kann ich mein Gepäck abholen?" },
   { ukr: "Де знаходиться митниця?", deu: "Wo ist der Zoll?" },
 ]
-const allWords = expressions.concat(questions, sentences, numbers, directions, colors, people, time, weather, opposites, bodyparts, verbs1, verbs2, verbs3, verbs4, travel)
+
+const hotel = [
+  { ukr: "Я замовляв столик", deu: "Ich habe eine Reservierung" },
+  { ukr: "Це номер з двоспальним ліжком?", deu: "Hat das Zimmer ein Doppelbett?" },
+  { ukr: "Номер в готелі", deu: "Das Hotelnummer" },
+  { ukr: "Нам потрібно три ключі", deu: "Wir brauchen drei Schlüssel" },
+  { ukr: "Чи є обслуговування номерів?", deu: "Haben Sie Zimmerservice?" },
+  { ukr: "Харчування включено?", deu: "Sind die Mahlzeiten inklusive?" },
+  { ukr: "Я - гість", deu: "Ich bin Gast" },
+  { ukr: "Мені треба поговорити з менеджером", deu: "Ich muss mit dem Manager reden" },
+  { ukr: "Душ не працює", deu: "Die Dusche funktioniert nicht" },
+  { ukr: "У номері немає ковдри", deu: "Das Zimmer hat keine Decken" },
+  { ukr: "Наш номер не був прибраний", deu: "Unser Zimmer wurde nicht gereinigt" },
+  { ukr: "Нам потрібні рушники для басейну", deu: "Wir brauchen Handtücher für den Pool" },
+  { ukr: "Нам потрібен номер з кондиціонером", deu: "Wir brauchen ein Zimmer mit Klimaanlage" },
+  { ukr: "Можете порекомендувати недорогий готель?", deu: "Können Sie ein preiswertes Hotel empfehlen?" },
+  { ukr: "Скільки коштує за добу?", deu: "Wie viel kostet es pro Nacht?" },
+  { ukr: "Я залишуся на три тижні", deu: "Ich bleibe drei Wochen" },
+  { ukr: "Чи є у Вас вільний номер?", deu: "Haben Sie ein Zimmer frei?" },
+  { ukr: "У Вас є басейн?", deu: "Haben Sie ein Schwimmbad?" },
+  { ukr: "Чи можу я оглянути номер?", deu: "Kann ich mir das Zimmer ansehen?" },
+  { ukr: "Чи є щось дешевше?", deu: "Haben Sie etwas preiswerteres?" },
+  { ukr: "Мені треба орендувати авто", deu: "Ich muss ein Auto mieten" },
+  { ukr: "Де я можу знайти таксі?", deu: "Wo finde ich ein Taxi?" },
+  { ukr: "Я готовий звільнити номер", deu: "Ich bin bereit abzureisen" },
+  { ukr: "Не могли б ви мені викликати таксі?", deu: "Können Sie mir ein Taxi rufen?" },
+  { ukr: "Ваш персонал - чудовий", deu: "Ihr Personal ist ausgezeichnet" },
+  { ukr: "Дякую вам за все", deu: "Vielen Dank für alles" },
+  { ukr: "Я буду вас рекомендувати", deu: "Ich werde Sie weiterempfehlen" },
+  { ukr: "пожежа", deu: "das Feuer" },
+  { ukr: "Допоможіть мені", deu: "Helfen Sie mir" },
+  { ukr: "поліція", deu: "die Polizei" },
+  { ukr: "Це - надзвичайна ситуація", deu: "Es ist ein Notfall" },
+]
+
+const city = [
+  { ukr: "ринок", deu: "der Markt" },
+  { ukr: "книжний магазин", deu: "die Buchhandlung" },
+  { ukr: "пекарня", deu: "die Bäckerei" },
+  { ukr: "ресторан", deu: "das Restaurant" },
+  { ukr: "кінотеатр", deu: "das Kino" },
+  { ukr: "банк", deu: "die Bank" },
+  { ukr: "церква", deu: "die Kirche" },
+  { ukr: "Яка наступна зупинка?", deu: "Was ist die nächste Haltestelle?" },
+  { ukr: "Це моя зупинка?", deu: "Ist das meine Haltestelle?" },
+  { ukr: "Пробачте, мені треба тут вийти", deu: "Entschuldigung Sie, ich muss hier aussteigen" },
+  { ukr: "Коли починається фільм?", deu: "Wann fängt der Film an?" },
+  { ukr: "Мені, будь ласка, чотири квитки", deu: "Ich hätte gerne vier Karten" },
+  { ukr: "центральна частина міста", deu: "die Innenstadt" },
+  { ukr: "перехрестя", deu: "die Kreuzung" },
+  { ukr: "дорожний знак", deu: "das Verkehrsschild" },
+  { ukr: "вуличний ліхтар", deu: "die Straßenlampe" },
+  { ukr: "світлофор", deu: "die Ampel" },
+  { ukr: "пішохід", deu: "der Fußgänger" },
+  { ukr: "тротуар", deu: "der Bürgersteig" },
+  { ukr: "пішохідний перехід", deu: "der Zebrastreifen" },
+  { ukr: "туалет, вбиральня", deu: "die Toilette" },
+  { ukr: "Чи можу я купити Вам випити?", deu: "Darf ich Ihnen ein Getränk ausgeben?" },
+  { ukr: "Чи є вхідна плата?", deu: "Kostet das Eintritt?" },
+  { ukr: "Пиво будь ласка", deu: "Ein Bier bitte" },
+  { ukr: "Яке пиво?", deu: "Welche Sorte Bier?" },
+  { ukr: "біле вино", deu: "der Weißwein" },
+  { ukr: "Хочете потанцювати?", deu: "Möchten Sie tanzen?" },
+  { ukr: "Я хочу танцювати", deu: "Ich möchte gerne tanzen" },
+  { ukr: "Я занепокоєний", deu: "Ich mache mich Sorgen" },
+  { ukr: "Я загубився", deu: "Ich habe mich verrirt" },
+  { ukr: "Будь ласка, зачекайте на мене", deu: "Warten Sie bitte auf mich" },
+  { ukr: "Скільки коштує проїзд?", deu: "Wie teuer ist der Fahrpreis?" },
+  { ukr: "транспорт", deu: "das Verkehrsmittel" },
+  { ukr: "тягнучки на дорогах", deu: "der Verkehr" },
+  { ukr: "вертоліт", deu: "der Hubschrauber"},
+  { ukr: "поїзд", deu: "der Zug" },
+  { ukr: "велосипед", deu: "das Fahrrad" },
+  { ukr: "човен", deu: "das Schiff" },
+  { ukr: "станція метро", deu: "die U-Bahn-Station" },
+  { ukr: "вантажівка", deu: "der Lastwagen" },
+  { ukr: "крита автостоянка", deu: "das Parkhaus" },
+  { ukr: "гірський хребет", deu: "die Bergkette" },
+  { ukr: "річка", deu: "der Fluss" },
+  { ukr: "півострів", deu: "die Halbinsel" },
+  { ukr: "пляж", deu: "der Strand" },
+  { ukr: "гора", deu: "der Berg" },
+  { ukr: "озеро", deu: "der See" },
+  { ukr: "водоспад", deu: "der Wasserfall" },
+]
+
+const shopping = [
+  { ukr: "Не могли б ви мені допомогти?", deu: "Können Sie mir helfen?" },
+  { ukr: "Я йду за покупками", deu: "Ich gehe einkaufen" },
+  { ukr: "Я хочу піти в торговий центр", deu: "Ich möchte zum Einkaufzentrum gehen" },
+  { ukr: "Я просто дивлюся", deu: "Ich sehe mich nur um" },
+  { ukr: "Де знаходиться примірювальна кімната?", deu: "Wo ist die Anprobe?" },
+  { ukr: "Не могли б Ви мені показати деякі сорочки?", deu: "Können Sie mir einige Hemden zeigen?" },
+  { ukr: "Чи можу я приміряти?", deu: "Kann ich das anprobieren?" },
+  { ukr: "Чи є у Вас ця річ в іншому кольорі?", deu: "Haben Sie es in einer anderen Farbe?" },
+  { ukr: "Це мені не подобається", deu: "Das gefällt mir nicht" },
+  { ukr: "У вас є більшого розміру?", deu: "Haben Sie es in einer größeren Größe?" },
+  { ukr: "Це завузьке", deu: "Das ist zu eng" },
+  { ukr: "Мені підходить", deu: "Es passt gut" },
+  { ukr: "сукня", deu: "das Kleid" },
+  { ukr: "шорти", deu: "die kurze Hose" },
+  { ukr: "Мені подобається ця сорочка", deu: "Mir gefällt dieses Hemd" },
+  { ukr: "штани", deu: "die Hose" },
+  { ukr: "пальто", deu: "der Mantel" },
+  { ukr: "спідниця", deu: "der Rock" },
+  { ukr: "кепка", deu: "die Kappe" },
+  { ukr: "гаманець", deu: "die Handtasche" },
+  { ukr: "капелюх, шапка", deu: "der Hut" },
+  { ukr: "взуття", deu: "die Schuhe" },
+  { ukr: "ювелір", deu: "der Juwelier" },
+  { ukr: "ювелірні вироби", deu: "der Schmuck" },
+  { ukr: "брошка", deu: "die Brosche" },
+  { ukr: "намисто", deu: "die Halskette" },
+  { ukr: "сережки", deu: "die Ohrringe" },
+  { ukr: "каблучка", deu: "der Ring" },
+  { ukr: "браслет", deu: "das Armband" },
+  { ukr: "Не могли б ви мені загорнути це як подарунок, будь ласка?", deu: "Können Sie es bitte als Geschenk verpacken?" },
+  { ukr: "Це занадто дорого", deu: "Das ist zu teuer" },
+  { ukr: "Скільки я Вам винен?", deu: "Was schulde ich Ihnen?" },
+  { ukr: "Чи є щось на розпродажу?", deu: "Haben Sie irgendwelche Sonderangebote?" },
+  { ukr: "Я збираюсь платити готівкою", deu: "Ich zahle in bar" },
+  { ukr: "Ви приймаєте кредитки?", deu: "Nehmen Sie Kreditkarten?" },
+  { ukr: "Чи можу я це обміняти?", deu: "Kann ich es umtauschen?" },
+  { ukr: "Відчинено", deu: "Offen" },
+  { ukr: "Зачинено", deu: "Geschlossen" },
+  { ukr: "квитанція", deu: "die Quittung" },
+  { ukr: "пошкоджений", deu: "beschädigt" },
+  { ukr: "зламаний", deu: "kaputt" },
+  { ukr: "обідня перева", deu: "Während der Mittagszeit geschlossen" },
+  { ukr: "продавець", deu: "der Verkaufer" },
+  { ukr: "О котрій годині крамниця зачиняється?", deu: "Wann macht der Laden zu?" },
+]
+
+const restaurant = [
+  { ukr: "Де знайти хороший ресторан?", deu: "Wo finde ich ein gutes Restaurant?" },
+  { ukr: "Нам треба столик на чотирьох осіб", deu: "Wir brauchen einen Tisch für vier Personen" },
+  { ukr: "Я хотів би замовити столик на двох осіб", deu: "Ich möchte einen Tisch für zwei Personen reservieren" },
+  { ukr: "офіціант", deu: "der Ober" },
+  { ukr: "офіціантка", deu: "die Bedienung" },
+  { ukr: "Можна меню?", deu: "Kann ich die Speisekarte sehen?" },
+  { ukr: "Що б ви порадили?", deu: "Was würden Sie empfehlen?" },
+  { ukr: "з льодом", deu: "mit Eis" },
+  { ukr: "ложка", deu: "der Löffel" },
+  { ukr: "ніж", deu: "das Messer" },
+  { ukr: "виделка", deu: "die Gabel" },
+  { ukr: "склянка", deu: "das Glas" },
+  { ukr: "блюдце", deu: "die Untertasse" },
+  { ukr: "тарілка", deu: "der Teller" },
+  { ukr: "чашка", deu: "die Tasse" },
+  { ukr: "Мені потрібна серветка", deu: "Ich brauche eine Serviette" },
+  { ukr: "Я не хочу перець", deu: "Ich möchte keinen Pfeffer" },
+  { ukr: "сільничка", deu: "der Salzstreuer" },
+  { ukr: "перечниця", deu: "der Pfefferstreuer" },
+  { ukr: "Чи не могли б ви передати сіль?", deu: "Können Sie mir das Salz reichen?" },
+  { ukr: "М'ясо сире", deu: "Das Fleisch ist roh" },
+  { ukr: "Я хотів би спробувати місцеву страву", deu: "Ich hätte gerne ein ortstypisches Gericht" },
+  { ukr: "Які входять інгредієнти?", deu: "Was sind die Zutaten?" },
+  { ukr: "Який вид м'яса у Вас є?", deu: "Welche Fleischsorten haben Sie?" },
+  { ukr: "Не могли б ви мені принести ще води?", deu: "Können Sie mir noch etwas Wasser bringen?" },
+  { ukr: "Було смачно", deu: "Das war köstlich" },
+  { ukr: "Це гостра страва?", deu: "Ist es scharf?" },
+  { ukr: "Вони солодкі?", deu: "Sind sie süß?" },
+  { ukr: "кислий", deu: "sauer" },
+  { ukr: "Їжа холодна", deu: "Das Essen ist kalt" },
+  { ukr: "Як це готується?", deu: "Wie wird es zubereitet?" },
+  { ukr: "запечений", deu: "gebacken" },
+  { ukr: "приготовлений на грилі", deu: "gegrillt" },
+  { ukr: "смажений", deu: "frittiert" },
+  { ukr: "тушкований", deu: "sautiert" },
+  { ukr: "підсмажений", deu: "getoasted" },
+  { ukr: "сніданок", deu: "das Frühstück" },
+  { ukr: "обід", deu: "das Mittagessen" },
+  { ukr: "вечеря", deu: "das Abendessen" },
+  { ukr: "перекуска", deu: "die Zwischenmahlzeit" },
+  { ukr: "Я на дієті", deu: "Ich bin auf Diät" },
+  { ukr: "рахунок", deu: "die Rechnung" },
+  { ukr: "чайові", deu: "das Trinkgeld" },
+  { ukr: "Чи можу я сплатити кредиткою?", deu: "Kann ich mit Kreditkarte zahlen?" },
+  { ukr: "Де знаходиться туалет?", deu: "Wo ist die Toilette?" },
+  { ukr: "Дякую Вам за гарне обслуговування", deu: "Vielen Dank für die gute Bedienung" },
+]
+
+const food = [
+  { ukr: "Продуктовий магазин відчинений", deu: "Das Lebensmittelgeschäft hat auf" },
+  { ukr: "платити", deu: "bezahlen" },
+  { ukr: "м'ясна лавка", deu: "der Metzger" },
+  { ukr: "Я голодний", deu: "Ich habe Hunger" },
+  { ukr: "готувати (їжу)", deu: "kochen"},
+  { ukr: "вечеряти з родиною", deu: "abendessen mit der Familie" },
+  { ukr: "накривати на стіл", deu: "Tisch decken" },
+  { ukr: "полуниці", deu: "die Erdbeeren" },
+  { ukr: "виноград", deu: "die Trauben" },
+  { ukr: "овочі", deu: "das Gemüse" },
+  { ukr: "часник", deu: "die Knoblauch" },
+  { ukr: "цибуля", deu: "der Zwiebel" },
+  { ukr: "капуста", deu: "der Kohl" },
+  { ukr: "гриби", deu: "die Pilze" },
+  { ukr: "кукурудза", deu: "der Mais" },
+  { ukr: "морква", deu: "die Möhre" },
+  { ukr: "квасоля", deu: "die Bohnen" },
+  { ukr: "рис", deu: "der Reis" },
+  { ukr: "молоко", deu: "die Milch" },
+  { ukr: "масло", deu: "die Butter" },
+  { ukr: "сир", deu: "die Käse" },
+  { ukr: "вершки", deu: "die Sahne" },
+  { ukr: "заморожені продукти", deu: "die Tiefkühlkost" },
+  { ukr: "яйця", deu: "die Eier" },
+  { ukr: "яловичина", deu: "das Rindfleisch" },
+  { ukr: "шинка", deu: "der Schinken" },
+  { ukr: "телятина", deu: "das Kalbfleisch" },
+  { ukr: "курка", deu: "das Huhn" },
+  { ukr: "трохи", deu: "ein bisschen" },
+  { ukr: "індичка", deu: "die Pute" },
+  { ukr: "бекон", deu: "der Speck" },
+  { ukr: "свинина", deu: "das Schweinefleisch" },
+  { ukr: "ковбаса", deu: "das Würstchen" },
+  { ukr: "свинна відбивна", deu: "das Schweinekotelett" },
+  { ukr: "печиво", deu: "das Plätzchen" },
+  { ukr: "пиріг", deu: "die Tarte" },
+  { ukr: "Мені не дозволено їсти цукор", deu: "Ich darf keinen Zucker essen" },
+  { ukr: "торт", deu: "der Kuchen" },
+  { ukr: "бутерброд", deu: "das belegtes Brot" },
+  { ukr: "кава", deu: "der Kaffee" },
+  { ukr: "апельсиновий сік", deu: "der Orangensaft" },
+  { ukr: "картопля фрі", deu: "die Pommes Frites" },
+  { ukr: "оцет", deu: "der Essig" },
+  { ukr: "олія", deu: "das Öl" },
+  { ukr: "приправа", deu: "das Gewürz" },
+  { ukr: "Треба додати солі", deu: "Es fehlt Salz" },
+  { ukr: "занадто", deu: "zu viel" },
+  { ukr: "пакет", deu: "der Beutel" },
+  { ukr: "коробка", deu: "die Packung" },
+]
+
+const beach = [
+  { ukr: "на пляжі", deu: "am Strand" },
+  { ukr: "засмагати", deu: "sonnen" },
+  { ukr: "захід сонця", deu: "der Sonnenuntergang" },
+  { ukr: "узбережжя", deu: "die Küste" },
+  { ukr: "океан", deu: "der Ozean" },
+  { ukr: "холодильник", deu: "die Kühlbox" },
+  { ukr: "сонячні окуляри", deu: "die Sonnenbrille" },
+  { ukr: "плавки", deu: "die Badehose" },
+  { ukr: "пляжна парасолька", deu: "der Strandschirm" },
+  { ukr: "сонцезахисний крем", deu: "die Sonnenmilch" },
+  { ukr: "Чи безпечний він для дітей?", deu: "Ist es sicher für Kinder?" },
+  { ukr: "Чи безпечно тут купатися?", deu: "Ist es sicher zu schwimmen?" },
+  { ukr: "Чи можемо ми тут безпечно пірнати?", deu: "Können wir hier gefahrlos tauchen?" },
+  { ukr: "Я хочу позасмагати", deu: "Ich möchte sonnenbaden" },
+  { ukr: "Я хочу піти на риболовлю", deu: "Ich möchte angeln" },
+  { ukr: "Я не хочу в похід", deu: "Ich möchte nicht zelten" },
+  { ukr: "Я хочу покататися на човні", deu: "Ich möchte Boot fahren" },
+]
+
+const vacation = [
+  { ukr: "Мені подобається слухати музику", deu: "Ich höre gern Musik" },
+  { ukr: "Мені подобається грати на гітарі", deu: "Ich spiele gern Gitarre" },
+  { ukr: "Я збираюся на прогулянку", deu: "Ich gehe spazieren" },
+  { ukr: "Мені не треба дивитися телевізор", deu: "Ich muss nicht Fernsehen gucken" },
+  { ukr: "Мені треба використовувати комп'ютер", deu: "Ich muss den Computer benutzen" },
+  { ukr: "Мені треба перейти вулицю", deu: "Ich muss die Straße überqueren" },
+  { ukr: "Мені треба відправити це поштою", deu: "Ich muss das per Post abschicken" },
+  { ukr: "Мені не треба класти гроші на рахунок в банк", deu: "Ich muss kein Geld auf die Bank einzahlen" },
+  { ukr: "Я люблю їздити на велосипеді", deu: "Ich fahre gern Fahrrad" },
+  { ukr: "Я не хочу грати у відеоігри", deu: "Ich möchte keine Videospiele spielen" },
+  { ukr: "Мені потрібно повертатися додому", deu: "Ich muss zurück nach Hause" },
+  { ukr: "Мені треба йти спати", deu: "Ich muss schlafen gehen" },
+  { ukr: "тварини", deu: "die Tiere" },
+  { ukr: "У Вас є собака?", deu: "Haben Sie einen Hund?" },
+  { ukr: "кролик", deu: "der Hase" },
+  { ukr: "півень", deu: "der Hahn" },
+  { ukr: "У мене алергія на кішок", deu: "Ich habe eine Allergie gegen Katze" },
+  { ukr: "Чи змія отруйна?", deu: "Ist die Schlange giftig?" },
+  { ukr: "Я не люблю комах", deu: "Ich mag keine Insekten" },
+  { ukr: "бджола", deu: "die Biene" },
+  { ukr: "Таргани - брудні", deu: "Küchenschaben sind dreckig" },
+  { ukr: "Це репелент від комах", deu: "Das ist Insektenschutz" },
+  { ukr: "Чи тут завжди так багато мух?", deu: "Sind hier immer so viele Fliegen?" },
+  { ukr: "у селі", deu: "auf dem Land" },
+  { ukr: "ферма", deu: "der Bauerhof" },
+  { ukr: "фермер", deu: "der Bauer" },
+  { ukr: "поле", deu: "das Feld" },
+  { ukr: "сарай", deu: "die Scheune" },
+  { ukr: "Небо гарне", deu: "Der Himmel ist wunderschön" },
+  { ukr: "Так багато зірок", deu: "Man sieht so viele Sterne" },
+  { ukr: "Повний місяць", deu: "Es ist Vollmond" },
+]
+const allWords = expressions.concat(questions, sentences, numbers, directions, colors, people, time, weather, opposites,
+   bodyparts, verbs1, verbs2, verbs3, verbs4, travel, hotel, restaurant, food, beach, vacation)
 
 let currentTheme = expressions;
 let answer = "";
@@ -801,6 +1089,42 @@ $("#verbs4").on("click", function () {
   $("#wordsAmount").text(memory.length + " Worte");
 })
 
+$("#shopping").on("click", function () {
+  memory = shopping;
+  currentTheme = shopping;
+  testAmount = shopping.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Einkaufen");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+
+$("#restaurant").on("click", function () {
+  memory = restaurant;
+  currentTheme = restaurant;
+  testAmount = restaurant.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Restaurant");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+
+$("#beach").on("click", function () {
+  memory = beach;
+  currentTheme = beach;
+  testAmount = beach.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Strand");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+
+$("#vacation").on("click", function () {
+  memory = vacation;
+  currentTheme = vacation;
+  testAmount = vacation.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Urlaub");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+
 $("#b1").on("click", function () {
   if (spokenMode === true) {
     showCorrect = true
@@ -851,6 +1175,33 @@ $("#travel").on("click", function () {
   testAmount = travel.length - 1;
   currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
   $(".themeName").text("Flugreisen");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+
+$("#hotel").on("click", function () {
+  memory = hotel;
+  currentTheme = hotel;
+  testAmount = hotel.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Hotel");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+
+$("#city").on("click", function () {
+  memory = city;
+  currentTheme = city;
+  testAmount = city.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("In der Stadt");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+
+$("#food").on("click", function () {
+  memory = food;
+  currentTheme = food;
+  testAmount = food.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Lebensmittel");
   $("#wordsAmount").text(memory.length + " Worte");
 })
 
