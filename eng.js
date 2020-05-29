@@ -1,5 +1,3 @@
-// Arzt, Büro, Jobsuche,
-// Arbeit, Computer
 const expressions = [
   { ukr: "Привіт", deu: "Hallo" },
   { ukr: "Доброго ранку", deu: "Guten Morgen" },
@@ -726,7 +724,6 @@ const shopping = [
   { ukr: "продавець", deu: "der Verkaufer" },
   { ukr: "О котрій годині крамниця зачиняється?", deu: "Wann macht der Laden zu?" },
 ]
-
 const restaurant = [
   { ukr: "Де знайти хороший ресторан?", deu: "Wo finde ich ein gutes Restaurant?" },
   { ukr: "Нам треба столик на чотирьох осіб", deu: "Wir brauchen einen Tisch für vier Personen" },
@@ -775,7 +772,6 @@ const restaurant = [
   { ukr: "Де знаходиться туалет?", deu: "Wo ist die Toilette?" },
   { ukr: "Дякую Вам за гарне обслуговування", deu: "Vielen Dank für die gute Bedienung" },
 ]
-
 const food = [
   { ukr: "Продуктовий магазин відчинений", deu: "Das Lebensmittelgeschäft hat auf" },
   { ukr: "платити", deu: "bezahlen" },
@@ -827,7 +823,6 @@ const food = [
   { ukr: "пакет", deu: "der Beutel" },
   { ukr: "коробка", deu: "die Packung" },
 ]
-
 const beach = [
   { ukr: "на пляжі", deu: "am Strand" },
   { ukr: "засмагати", deu: "sonnen" },
@@ -847,7 +842,6 @@ const beach = [
   { ukr: "Я не хочу в похід", deu: "Ich möchte nicht zelten" },
   { ukr: "Я хочу покататися на човні", deu: "Ich möchte Boot fahren" },
 ]
-
 const vacation = [
   { ukr: "Мені подобається слухати музику", deu: "Ich höre gern Musik" },
   { ukr: "Мені подобається грати на гітарі", deu: "Ich spiele gern Gitarre" },
@@ -881,8 +875,162 @@ const vacation = [
   { ukr: "Так багато зірок", deu: "Man sieht so viele Sterne" },
   { ukr: "Повний місяць", deu: "Es ist Vollmond" },
 ]
+const doctor = [
+  { ukr: "Чи є лікар в офісі?", deu: "Ist der Arzt anwesend?" },
+  { ukr: "Я хворий", deu: "Ich bin krank" },
+  { ukr: "Я почуваюсь зле", deu: "Ich fühle mich nicht gut" },
+  { ukr: "Мене болить живіт", deu: "Ich habe Magenschmerzen" },
+  { ukr: "У мене болить голова", deu: "Ich habe Kopfschmerzen" },
+  { ukr: "У мене болить горло", deu: "Ich habe Halsschmerzen" },
+  { ukr: "Мені треба лягти", deu: "Ich muss mich hinlegen" },
+  { ukr: "Мене нудить", deu: "Mir ist schwindelig" },
+  { ukr: "У мене діарея", deu: "Ich habe Durchfall" },
+  { ukr: "У мене мігрень", deu: "Ich habe Migräne" },
+  { ukr: "Чи є у Вас температура?", deu: "Haben Sie Fieber?" },
+  { ukr: "У мене лихоманка відучора", deu: "Ich habe seit gestern Fieber" },
+  { ukr: "Не могли б Ви покликати лікаря?", deu: "Können Sie bitte einen Arzt rufen?" },
+  { ukr: "Коли прийде лікар?", deu: "Wann kommt der Arzt?" },
+  { ukr: "У мене болить ступня", deu: "Mein Fuß tut weh" },
+  { ukr: "Я впав", deu: "Ich bin gefallen" },
+  { ukr: "Я потрапив у аварію", deu: "Ich hatte einen Unfall" },
+  { ukr: "Я думаю, що я зламав це", deu: "Ich glaube, ich habe es gebrochen" },
+  { ukr: "Міхур з льодом", deu: "der Eisbeutel" },
+  { ukr: "Підтримуюча пов'язка", deu: "die Schlaufe" },
+  { ukr: "Вам треба накласти гіпс", deu: "Sie brauchen einen Gipsverband" },
+  { ukr: "У Вас є милиці?", deu: "Haben Sie Krücken?" },
+  { ukr: "розтягнення зв'язок", deu: "die Verstauchung" },
+  { ukr: "Ви зламали кістку", deu: "Sie haben einen Knochen gebrochen" },
+  { ukr: "Мені треба ліки від болю", deu: "Ich brauche ein Schmerzmittel" },
+  { ukr: "У мене невисокий тиск", deu: "Ich habe keinen hohen Blutdruck" },
+  { ukr: "Я вагітна", deu: "Ich bin Schwanger" },
+  { ukr: "У мене висип", deu: "Ich habe einen Ausschlag" },
+  { ukr: "Подивіться на цей синяк", deu: "Sehen Sie sich diesen Bluterguss an" },
+  { ukr: "Поріз інфікований", deu: "Der Schnitt ist infiziert" },
+  { ukr: "грип", deu: "die Grippe" },
+  { ukr: "У мене застуда", deu: "Ich bin erkältet" },
+  { ukr: "У мене озноб", deu: "Ich habe Schüttelfrost" },
+  { ukr: "Де болить?", deu: "Wo tut es weh?" },
+  { ukr: "Як давно Ви так почуваєтесь?", deu: "Wie lange fühlen Sie sich schon so?" },
+  { ukr: "Я так почуваюся вже три дні", deu: "Ich fühle mich seit drei Tagen so" },
+  { ukr: "Приймаєте Ви які-небудь ліки?", deu: "Nehmen Sie irgendwelche Medikamenten?" },
+  { ukr: "Приймайте по дві таблетки на добу", deu: "Nehmen Sie zwei Tabletten täglich" },
+  { ukr: "Ви медсестра?", deu: "Sind Sie die Krankenschwester?" },
+  { ukr: "Це щось серйозне?", deu: "Ist es etwas Ernstes?" },
+  { ukr: "Я не знаю, що в мене", deu: "Ich weiß nicht, was ich habe" },
+  { ukr: "Чи треба мені рецепт?", deu: "Brauche ich ein Rezept?" },
+  { ukr: "Чи є поблизу аптека?", deu: "Gibt es in der Nähe eine Apotheke?" },
+  { ukr: "Мені треба щось від застуди", deu: "Ich brauche etwas gegen Erkältung" },
+  { ukr: "Дякую Вам за допомогу", deu: "Vielen Dank für Ihre Hilfe" },
+]
+const office = [
+  { ukr: "телефон", deu: "das Telefon" },
+  { ukr: "проектор", deu: "der Projektor" },
+  { ukr: "Чи працює принтер?", deu: "Funktioniert der Drucker?" },
+  { ukr: "компакт-диск", deu: "der Datenträger" },
+  { ukr: "комп'ютер", deu: "der Computer" },
+  { ukr: "екран", deu: "der Bildschirm" },
+  { ukr: "калькулятор", deu: "der Taschenrechner" },
+  { ukr: "Де ножиці?", deu: "Wo ist die Schere?" },
+  { ukr: "скріпка для паперу", deu: "die Büroklammer" },
+  { ukr: "Мені потрібна ручка", deu: "Ich brauche einen Stift" },
+  { ukr: "точилка для олівців", deu: "der Anspitzer" },
+  { ukr: "лінійка", deu: "das Lineal" },
+  { ukr: "конверт", deu: "der Briefumschlag" },
+  { ukr: "марка", deu: "die Briefmarke" },
+  { ukr: "клей", deu: "der Kleber" },
+  { ukr: "ластик", deu: "der Radiergummie" },
+  { ukr: "Я шукаю степлер", deu: "Ich suche einen Hefter" },
+  { ukr: "олівець", deu: "der Bleistift" },
+  { ukr: "папір", deu: "das Papier" },
+  { ukr: "записник", deu: "das Notizheft" },
+  { ukr: "слайдер", deu: "die Dias" },
+  { ukr: "календар", deu: "der Kalender" },
+  { ukr: "клейка стрічка", deu: "das Klebeband" },
+  { ukr: "Я шукаю карту", deu: "Ich suche eine Karte" },
+  { ukr: "гучномовець", deu: "der Lautsprecher" },
+  { ukr: "корзина для паперів", deu: "der Papierkorb" },
+  { ukr: "прапор", deu: "die Flagge" },
+  { ukr: "повідомлення", deu: "die Nachricht" },
+  { ukr: "Це його письмовий стіл?", deu: "Ist das sein Schreibtisch?" },
+  { ukr: "лампа", deu: "die Lampe" },
+  { ukr: "світло", deu: "das Licht" },
+]
+const jobSearch = [
+  { ukr: "Я шукаю роботу", deu: "Ich suche Arbeit" },
+  { ukr: "Чи можу я побачити Ваше резюме?", deu: "Kann ich Ihren Lebenslauf sehen?" },
+  { ukr: "Ось моє резюме", deu: "Hier ist mein Lebenslauf" },
+  { ukr: "Ось список моїх рекомендацій", deu: "Hier ist eine Liste meiner Referenzen" },
+  { ukr: "Який у Вас досвід?", deu: "Wie viel Erfahrung haben Sie?" },
+  { ukr: "Як давно Ви працюєте у цій галузі?", deu: "Wie lange arbeiten Sie bereits auf diesem Gebiet?" },
+  { ukr: "Я - випускник середньої школи", deu: "Ich habe Abitur" },
+  { ukr: "Я - випускник коледжу", deu: "Ich habe einen Hochschulabschluss" },
+  { ukr: "Я шукаю роботу на неповний робочий день", deu: "Ich suche eine Teilzeitstelle" },
+  { ukr: "Я хотів би працювати повний робочий день", deu: "Ich möchte gern Vollzeit arbeiten" },
+  { ukr: "Чи надаєту Ви медичну страхівку?", deu: "Bieten Sie Krankenversicherung an?" },
+  { ukr: "Так, після шести місяців роботи", deu: "Ja, nachdem Sie sechs Monate hier arbeiten" },
+  { ukr: "У Вас є дозвіл на роботу?", deu: "Haben Sie eine Arbeitserlaubnis?" },
+  { ukr: "Коли Ви можете почати?", deu: "Wann können Sie anfangen?" },
+  { ukr: "Я плачу десять євро на годину", deu: "Ich zahle zehn Euro pro Stunde" },
+  { ukr: "Я буду платити Вам щотижня", deu: "Ich zahle wöchentlich" },
+  { ukr: "щомісяця", deu: "monatlich" },
+  { ukr: "Будьте тут о восьмій ранку", deu: "Seien Sie um acht Uhr morgens hier" },
+  { ukr: "Робіть це ось так", deu: "Machen Sie es so" },
+  { ukr: "Субота та неділя для Вас - вихідні", deu: "Sie haben samstags und sontags frei" },
+  { ukr: "Ви будете змушені носити форму", deu: "Sie müssen Berufskleidung tragen" },
+]
+const work = [
+  { ukr: "мережа", deu: "das Netzwerk" },
+  { ukr: "посилання", deu: "der Link" },
+  { ukr: "інтернет-провайдер", deu: "der Internetdienstanbieter" },
+  { ukr: "безпечний веб-сайт", deu: "die sichere Website" },
+  { ukr: "пошукова система", deu: "die Suchmachine" },
+  { ukr: "завантажувати", deu: "hochladen" },
+  { ukr: "домашня сторінка", deu: "die Homepage" },
+  { ukr: "вибирати", deu: "auswählen" },
+  { ukr: "папка", deu: "der Ordner" },
+  { ukr: "панель інструментів", deu: "die Werkzeugleiste" },
+  { ukr: "закладка", deu: "das Lesezeichen" },
+  { ukr: "слеш(скісна риска)", deu: "der Schrägstrich" },
+  { ukr: "двокрапка", deu: "der Doppelpunkt" },
+  { ukr: "назад", deu: "zurück" },
+  { ukr: "вперед", deu: "weiter" },
+  { ukr: "зберегти", deu: "speichern" },
+  { ukr: "запустити(виконати)", deu: "ausführen" },
+  { ukr: "клікати", deu: "klicken" },
+  { ukr: "перетягувати", deu: "ziehen" },
+  { ukr: "оновлення", deu: "Aktualisieren" },
+  { ukr: "шаблон", deu: "die Vorlage" },
+  { ukr: "уподобання", deu: "die Einstellungen" },
+  { ukr: "передача файлів", deu: "die Dateiübertragung" },
+  { ukr: "увійти в акаунт", deu: "anmelden" },
+  { ukr: "пароль", deu: "das Kennwort" },
+  { ukr: "ім'я користувача", deu: "der Benutzername" },
+  { ukr: "цифровий підпис", deu: "die digitale Unterschrift" },
+  { ukr: "часті запитання", deu: "häufig gestellte Fragen" },
+ 
+]
+const computer = [
+  { ukr: "клавіатура", deu: "die Tastatur" },
+  { ukr: "кнопка", deu: "die Schaltfläche" },
+  { ukr: "кнопка миші", deu: "die Maustaste" },
+  { ukr: "килимок для миші", deu: "das Mauspad" },
+  { ukr: "база даних", deu: "die Datenbank" },
+  { ukr: "буфер обміну", deu: "die Zwischenablage" },
+  { ukr: "адреса електронної пошти", deu: "die E-Mail-Adresse" },
+  { ukr: "всім відповісти", deu: "allen antworten" },
+  { ukr: "одержувач", deu: "der Empfänger" },
+  { ukr: "прикріплені файли", deu: "angehängte Dateien" },
+  { ukr: "заголовок повідомлення", deu: "die Nachrichtenüberschriften" },
+  { ukr: "приєднувати", deu: "anhängen" },
+  { ukr: "корзина(онлайн-покупки)", deu: "der Einkaufswagen" },
+  { ukr: "група новин", deu: "die Newsgruppe" },
+  { ukr: "вхідні повідомлення", deu: "Posteingang" },
+  { ukr: "вихідні повідомлення", deu: "Postausgang" },
+  { ukr: "видалені повідомлення", deu: "gelöschte Nachrichten" },
+]
+
 const allWords = expressions.concat(questions, sentences, numbers, directions, colors, people, time, weather, opposites,
-   bodyparts, verbs1, verbs2, verbs3, verbs4, travel, hotel, restaurant, food, beach, vacation)
+   bodyparts, verbs1, verbs2, verbs3, verbs4, travel, hotel, restaurant, food, beach, vacation, doctor, office, jobSearch, work, computer)
 
 let currentTheme = expressions;
 let answer = "";
@@ -1125,6 +1273,47 @@ $("#vacation").on("click", function () {
   $("#wordsAmount").text(memory.length + " Worte");
 })
 
+$("#doctor").on("click", function () {
+  memory = doctor;
+  currentTheme = doctor;
+  testAmount = doctor.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Arzt");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+
+$("#office").on("click", function () {
+  memory = office;
+  currentTheme = office;
+  testAmount = office.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Büro");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+$("#jobSearch").on("click", function () {
+  memory = jobSearch;
+  currentTheme = jobSearch;
+  testAmount = jobSearch.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Jobsuche");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+$("#work").on("click", function () {
+  memory = work;
+  currentTheme = work;
+  testAmount = work.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Arbeit");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
+$("#computer").on("click", function () {
+  memory = computer;
+  currentTheme = computer;
+  testAmount = computer.length - 1;
+  currentThemaWords = currentTheme.map(item => item.ukr + " - " + item.deu + "; ");
+  $(".themeName").text("Computer");
+  $("#wordsAmount").text(memory.length + " Worte");
+})
 $("#b1").on("click", function () {
   if (spokenMode === true) {
     showCorrect = true
